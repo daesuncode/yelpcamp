@@ -1,0 +1,22 @@
+<% include partials/header.ejs %>
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Campgrounds</h1>
+    <p class="lead">See below for all the campgrounds our users have submitted!</p>
+</div>
+
+<div class="container">
+    <div class="row">
+            <% campgrounds.forEach(function(camp){ %>
+                <div class="col-sm-3">
+                    <h3><%= camp.name %></h3>
+                    <br>
+                    <img class="campgroundImage" src="<%= camp.image %>">
+                </div>
+            <% }) %>
+    </div>
+</div>
+
+ 
+
+<% include partials/footer.ejs %>

@@ -1,0 +1,25 @@
+<% include partials/header.ejs %>
+
+<!--Header-->
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Welcome to YelpCamp!</h1>
+    <p class="lead">Find the best campgrounds to plan your next escape!</p>
+</div>
+
+<!--Adding campground form-->
+<div class="container border border-primary px-md-5 py-md-5 bg-primary rounded" id="campSubmitForm">
+    <form action="/campgrounds" method="post" class="px-md-5">
+        <div class="form-group">
+            <label for="campgroundName" class="text-light">Campground Name</label>
+            <input id="campgroundName" type="text" class="form-control" name="name" placeholder="Campground Name">
+        </div>
+        <div class="form-group">
+            <label for="imageURL" class="text-light">Image URL</label>
+            <input name="image" id="imageURL" class="form-control" placeholder="Image URL">
+            <small class="form-text text-light">Be sure to input the image URL not the actual file!</small>
+        </div>
+        <button class="btn btn-light text-primary">Submit</button>
+    </form>
+</div>
+
+<% include partials/footer.ejs %>
